@@ -1,4 +1,4 @@
-<!-- 
+<!--
 /*
  * Copyright 2014-2019 Aleksandr Mashchenko.
  *
@@ -23,8 +23,6 @@
     <name>gitflow-maven-plugin</name>
     <version>1.12.1-SNAPSHOT</version>
 
-    <description>The Git-Flow Maven Plugin supports various Git workflows, including Vincent Driessen's successful Git branching model and GitHub Flow. This plugin runs Git and Maven commands from the command line. Supports Eclipse Plugins build with Tycho.</description>
-
     <inceptionYear>2014</inceptionYear>
 
     <licenses>
@@ -33,13 +31,16 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
-    </licenses> 
+    </licenses>
 
-    <developers>
-        <developer>
-            <name>Aleksandr Mashchenko</name>
-        </developer>
-    </developers>
+    <organization>
+        <name>Novamedia Svenska Postkodlotteriet AB</name>
+        <url>http://www.postkodlotteriet.se/</url>
+    </organization>
+    <description>
+        This is a fork of https://github.com/aleksandr-m/gitflow-maven-plugin to solve https://github.com/aleksandr-m/gitflow-maven-plugin/pull/160.
+        This project can be removed and cleaned from Nexus when the original plugin is released.
+    </description>
 
     <url>${url}</url>
 
@@ -51,22 +52,23 @@
 
     <distributionManagement>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>nexus-public</id>
+            <name>Nexus Release Repo</name>
+            <url>https://nexus.se.novamedia.com/nexus/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>public-snapshots</id>
+            <name>Nexus Snapshot Repo</name>
+            <url>https://nexus.se.novamedia.com/nexus/content/repositories/snapshots</url>
+            <uniqueVersion>true</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
 
     <properties>
         <java.version>1.6</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scm.url>scm:git:git@github.com:aleksandr-m/gitflow-maven-plugin.git</scm.url>
-        <url>https://github.com/aleksandr-m/gitflow-maven-plugin</url>
+        <scm.url>scm:git:git@github.com:novamediasverige/gitflow-maven-plugin.git</scm.url>
+        <url>https://github.com/novamediasverige/gitflow-maven-plugin</url>
         <maven-plugin-plugin.version>3.5</maven-plugin-plugin.version>
     </properties>
 
